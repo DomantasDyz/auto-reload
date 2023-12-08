@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Reloadas",
+  "version": "1.0",
+  "description": "Auto Reload'ina puslapį kas x sekundes.",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_title": "Auto Reloadas",
+    "default_popup": "autoreload.html"
+  },
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'; script-src-elem 'self' 'unsafe-inline'"
+  },
+  "background.service_worker": {
+    "scripts": [
+      "autoReload.js"
+],
+    "persistent": true
+  }
+}
